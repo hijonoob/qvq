@@ -7,14 +7,8 @@ require 'Slim/Slim.php';
 $app = new \Slim\Slim();
 
 // GET route
-
-
-$app->get('/hello/:name', function ($name) {
-    echo "Hello, $name";
-});
-
 $app->get('/perguntas/:materia/:serie', function($materia, $serie) {
-include '../cms/restrito/conexao.php';
+include '../cms2/restrito/conexao.php';
 $resultado = $conexao->query("
 SELECT * 
 FROM  `questoes` 
@@ -57,23 +51,66 @@ echo '
 $app->get(
     '/',
     function () {
-echo 'aaaahhh';
-include '../cms/restrito/conexao.php';
-$resultado = $conexao->query("SELECT usuario FROM escolas");
-$i = 1;
-while ($linha = $resultado->fetch_assoc()){
-	echo '<tr>';
-	echo '<td>' . $i . '</td>'; // colocar número de repetição
-	echo '<td>' . $linha['usuario'] .'</td>';
-	echo '</tr>';
-	$i++;
-        echo 'hellow there';
+       echo 'Ola, esta eh a API do Jogo QvQ';
     }
-});
+);
 
 
+$app->get(
+    '/serie/:materia',
+    function ($materia) {
+
+    }
+);
 
 // POST route
+$app->get(
+    '/login/:user/:pass', function($user, $pass) {
+include '../cms2/restrito/conexao.php';
+$usuario = '"'.$user.'"';
+$resultado = $conexao->query("
+SELECT senha 
+FROM  `professores` 
+WHERE `usuario`=$usuario
+LIMIT 0 , 1
+");
+
+$linha = $resultado->fetch_assoc();
+
+if(! $linha) {
+   $permissao=1;
+
+   $resultado = $conexao->query("
+      SELECT senha 
+      FROM  `alunos` 
+      WHERE `usuario`=$usuario
+      LIMIT 0 , 1
+    ");
+
+   $linha = $resultado->fetch_assoc();
+
+} else {
+   $permissao=2;
+}
+   if($linha['senha']==$pass) {
+      echo ' 
+ 
+{
+	"usuario":' . $usuario . ',
+	"nivelUsuario":' .  $permissao .'
+}
+';
+   } else {
+   echo '
+        {
+            "ErrorCode": 403,
+            "ErrorMessage": "Forbidden"
+        }
+    ';
+}
+}
+);
+
 $app->post(
     '/post',
     function () {
@@ -86,19 +123,6 @@ $app->put(
     '/put',
     function () {
         echo 'This is a PUT route';
-    }
-);
-
-// PATCH route
-$app->patch('/patch', function () {
-    echo 'This is a PATCH route';
-});
-
-// DELETE route
-$app->delete(
-    '/delete',
-    function () {
-        echo 'This is a DELETE route';
     }
 );
 
