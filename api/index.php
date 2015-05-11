@@ -15,13 +15,16 @@ FROM  `questoes`
 WHERE  `materia_idMateria` =$materia AND `anos_IdAno` =$serie
 LIMIT 0 , 20
 ");
-$i = 1;
+$j = 1;
 
 echo '{
 "perguntas": [';
 
 
 while ($linha = $resultado->fetch_assoc()){
+if($j>1){
+  echo ',';
+}
 echo '
         {
             "pergunta": {
@@ -36,9 +39,6 @@ echo '
             }
         }  
 ';
-  if($i<2){
-     echo ',';
-  }
    $i++;
 
 }
@@ -57,11 +57,34 @@ $app->get(
 
 
 $app->get(
-    '/serie/:materia',
-    function ($materia) {
+    '/materias/:serie',
+    function ($serie) {
 
-    }
-);
+include '../cms2/restrito/conexao.php';
+$resultado = $conexao->query("
+SELECT `materia_idMateria`,
+COUNT(*)
+FROM  `questoes`
+WHERE  `anos_idAno` =$serie
+GROUP BY `materia_idMateria`
+");
+$i=1;
+$sep="";
+$materiaLista="";
+$qtdadeLista="";
+
+while ($linha = $resultado->fetch_assoc()){
+if($i>1){ $sep=",";}
+$materiaLista = $materiaLista.$sep.$linha['materia_idMateria'];
+$qtdadeLista = $qtdadeLista.$sep.$linha['COUNT(*)'];
+$i++;
+}
+
+echo '{
+"materias": ['.($materiaLista).'],
+"quantidadeDeQuestoes": ['.($qtdadeLista).']
+}';
+});
 
 // POST route
 $app->get(
