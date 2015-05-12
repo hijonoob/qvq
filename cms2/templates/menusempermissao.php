@@ -11,5 +11,10 @@
 	          </li>
 -->
 	          <li>
-	              <a href="logout.php">Logout</a>
+	              <a>  Olá, <?php echo $_SESSION['nome']; ?></a>
 	          </li>
+
+                  <li>
+                      <a href="logout.php">Logout</a>
+                  </li>
+

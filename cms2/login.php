@@ -8,10 +8,10 @@
               if ($usuario=='' || $senha=='') {
                 echo "<div class='alert alert-warning'> Usuário e senha devem ser preenchidos. </div>";
               } else {
-                if ($sql = $conexao->prepare("SELECT senha, perfil FROM escolas WHERE usuario = ?")) {
+                if ($sql = $conexao->prepare("SELECT senha, perfil, idEscolas, nome FROM escolas WHERE usuario = ?")) {
                   $sql->bind_param('s', $usuario);
                   $sql->execute();
-                  $sql->bind_result($senhacomparacao, $permissao);
+                  $sql->bind_result($senhacomparacao, $permissao, $idEscolas, $nome);
                   $sql->fetch();
                   if ($senhacomparacao == ''){
                     echo "<div class='alert alert-danger'> Erro ao conectar, favor tentar novamente </div>"; // Usuário não encontrado
@@ -22,10 +22,11 @@
                         echo $permissao;
                         $_SESSION['usuario']=$usuario;
                         $_SESSION['permissao']=$permissao;
+                        $_SESSION['idEscolas']=$idEscolas;
+                        $_SESSION['nome']=$nome;
                         echo '<script> location.reload(); </script>';
                       } else {
                           echo "<div class='alert alert-danger'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
-
                       }
                   }
                   $sql->close();

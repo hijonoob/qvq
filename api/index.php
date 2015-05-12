@@ -14,12 +14,12 @@ $app->post('/questaonova/', function () use ($app) {
     $serie = $data['serie'];
     $idGrupo = $data['idGrupos'];
     $perguntas = $data['pergunta'];
-    $pergunta = '"'.$perguntas["questao"].'"';
-    $respCert = '"'.$perguntas["respostaCorreta"].'"';
+    $pergunta = $perguntas["questao"];
+    $respCert = $perguntas["respostaCorreta"];
     $respAlts = $perguntas["respostasErradas"];
-    $respAlt1 = '"'.$respAlts[0].'"';
-    $respAlt2 = '"'.$respAlts[1].'"';
-    $respAlt3 = '"'.$respAlts[2].'"';
+    $respAlt1 = $respAlts[0];
+    $respAlt2 = $respAlts[1];
+    $respAlt3 = $respAlts[2];
     $professor = $data['professor']; 
 
 include '../cms2/restrito/conexao.php';
