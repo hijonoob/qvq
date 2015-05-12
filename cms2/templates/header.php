@@ -26,6 +26,26 @@
 <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
+<?php
+/*
+// Set language to pt
+putenv('LC_ALL=pt_BR');
+setlocale(LC_ALL, 'pt_BR');
+
+// Specify location of translation tables
+bindtextdomain("cms4qvq", "./locale");
+
+// Choose domain
+textdomain("cms4qvq");
+
+// Print a test message
+echo gettext("Welcome to My PHP Application");
+
+// Or use the alias _() for gettext()
+echo _("Have a nice day");
+*/
+?>
+
   </head>
   <body>
   	<div id="wrap">
