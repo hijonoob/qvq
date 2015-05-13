@@ -69,6 +69,7 @@ input {
     margin-bottom: 0px;
     background-image: url("../images/jumboground.jpg");
     height: 584px;
+    background-size: 100%;
 }
 
 /* FAQ */
@@ -167,7 +168,7 @@ body.contraste .rss_icon {
 /* Logo do Jogo */
 .be_logo {
     display: block;
-    background: transparent url("../images/logo.png") no-repeat 50% 50%;
+    background: none;
     position: relative;
     height: 326px;
     text-indent: -99999px;
@@ -232,7 +233,7 @@ form label.error {
 @media (max-width: 767px) {
     .be_logo {
         display: block;
-        background: transparent url("../images/logo-small.png") no-repeat 50% 50%;
+        background: none;
         position: relative;
         height: 326px;
     }

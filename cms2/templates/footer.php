@@ -4,17 +4,17 @@
                 <h2>Área de Gestão QvQ</h2>
                 <div class="listanoticia">
                   <dl class="dl-horizontal">
-                    <p>Acesso restrito à escolas cadastradas</p>
-		     <p>Caso não represente esta escola, favor deslogar</p>
+                    <p>Registre-se enviando seus dados para:</p>
+		     <p><a href="mailto:cadastro@quizvsquiz.com.br">cadastro@quizvsquiz.com.br</a></p>
 		  </dl>
                 </div>
               </div>
               <div class="col-md-4">
                   <h3>QvQ - Quiz Vs Quiz</h3><br>
-                  Rua Bell Aliance, 225<br>
-                  Jd. São Caetano<br>
-                  São Caetano do Sul<br>
-                  SP - 09581-420
+                  Projeto desenvolvido como<br>
+                  trabalho de conclusão de curso de<br>
+                  Tecnologia em Jogos Digitais da<br>
+                  FATEC - São Caetano do Sul
               </div>
           </div>
       </div>
