@@ -4,10 +4,24 @@
 ?>
 <script language="javascript" type="text/javascript">
     /* Author :: Dharmendra Patri | Email :: dharam.new@gmail.com | Site :: http://lovewithbug.com | http://forthera.com */
-  function move_list_items(sourceid, destinationid) { $("#"+sourceid+"  option:selected").appendTo("#"+destinationid); }
-  function move_list_items_all(sourceid, destinationid) { $("#"+sourceid+" option").appendTo("#"+destinationid); }
-  function salvarAlunosGrupo() { console.log("Salvar"); }
-
+    function move_list_items(sourceid, destinationid) {
+      var professores = "";
+      $("#"+sourceid+"  option:selected").appendTo("#"+destinationid);
+      $("#from_select_list option").each(function()
+      {
+          professores =  professores + " " + $(this).val();
+      });
+      $("#listaProfessoresNova").val(professores);
+    }
+    function move_list_items_all(sourceid, destinationid) {
+      var professores = "";
+      $("#"+sourceid+" option").appendTo("#"+destinationid);
+      $("#from_select_list option").each(function()
+      {
+          professores =  professores + " " + $(this).val();
+      });
+      $("#listaProfessoresNova").val(professores);
+    }
 </script>
 <style>
   select#from_select_list { width: 90%;}
@@ -41,11 +55,27 @@
 					}
 					$maior++;
 					echo "<h2> Grupo: ". $maior ."</h2>";
-					echo "<p> </p>"
-				?>
-
-
-
+          // salva o novo grupo com os professores da lista
+          if( isset( $_POST['salvarProfessorNoGrpo'] ) ):
+              $listaProfessoresNova = trim($_POST['listaProfessoresNova']);
+              if ($listaProfessoresNova=='') {
+                echo "<div class='alert alert-warning'> Erro ao salvar dados - Necessário adicionar pelo menos um professor. </div>";
+              } else {
+                $listProfNov = explode(" ", $listaProfessoresNova);
+                // Encontra itens novos
+                foreach ($listProfNov as &$prof) {
+                  $param = $conexao->prepare('INSERT INTO ProfGrupos(professores_usuario, grupos_idGrupos) VALUES (?, ?)');
+                  $param->bind_param('ss', $prof, $maior);
+                  if ($param->execute()) {
+                    echo "<div class='alert alert-success'> Professor " .  $prof . " adicionado ao grupo " . $maior ." </div>";
+                    $param->close();
+                  } else {
+                    echo "<div class='alert alert-success'> Erro ao adicionar professor " .  $prof . " ao grupo </div>";
+                  }
+                }
+              }
+            endif;
+          ?>
 
      <table>
 
@@ -82,7 +112,12 @@
           </tr>
         <tr>
             <td colspan="2">
-              <p><input id="salvarAlunosGrupo" type="button" value="Salvar alteração de alunos" onclick="salvarAlunosGrupo();" /></p>
+              <p>
+                <form action="" method="POST" id="salvaProfessoresNoGrupo" name="salvaProfessoresNoGrupo">
+                  <input id="salvarProfessorNoGrpo" name="salvarProfessorNoGrpo" type="submit" value="Criar grupo com professores" />
+                  <input type="hidden" name="listaProfessoresNova" id="listaProfessoresNova" value=" " />
+                </form>
+              </p>
             </td>
           </tr>
        </table>
@@ -91,6 +126,3 @@
 
 		</div>	
 <?php include 'templates/footer.php' ?>
-
-
-

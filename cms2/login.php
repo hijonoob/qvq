@@ -18,13 +18,11 @@
                   } else {
                       //$senhacomp = crypt($senha, $senhacomparao);
                       if($senhacomparacao == $senha) {
-                        // logado, cria as sessões
-                        echo $permissao;
                         $_SESSION['usuario']=$usuario;
                         $_SESSION['permissao']=$permissao;
                         $_SESSION['idEscolas']=$idEscolas;
                         $_SESSION['nome']=$nome;
-                        echo '<script> location.reload(); </script>';
+                        //echo '<script> location.reload(); </script>';
                       } else {
                           echo "<div class='alert alert-danger'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
                       }
@@ -34,7 +32,7 @@
                 }
               }
       if(isset($_SESSION['permissao'])) {
-        echo "<div class='alert alert-success'>Você está logado </div>";
+        echo "<div class='alert alert-success'>Você está logado - recarregue a página para ver os menus </div>";
       }
       ?>
       <div id="login">

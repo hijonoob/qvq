@@ -266,7 +266,7 @@ if($j>1){
 }
 echo '
         {
-            "pergunta": {
+            "questoes": {
                 "idPergunta":' . $linha['idQuestoes'] . ',
                 "pergunta": "' . $linha['pergunta'] . '",
                 "respostaCorreta": "' . $linha['altResp'] . '",
