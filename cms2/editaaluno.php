@@ -10,10 +10,12 @@
 				if($usuario){
 
 					if ($sql = $conexao->prepare("SELECT nome, dtNasc, email, telFixo, telCel, end, cid, est, cep, senha, grupos_idGrupos, anos_idAno FROM alunos WHERE usuario = ?")) {
-						$sql->bind_param('i', $usuario);
+						$sql->bind_param('s', $usuario);
 						$sql->execute();
 						$sql->bind_result($nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha, $grupos_idGrupos, $anos_idAno);
 						$sql->fetch();
+echo $nome;
+echo "aqui o nome";
 						if ($nome == ''){
 							echo "<div class='alert alert-warning'> Aluno não encontrado </div>";
 						} else {

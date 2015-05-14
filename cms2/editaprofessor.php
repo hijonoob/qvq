@@ -9,7 +9,7 @@
 				$usuario = htmlspecialchars($_GET["usuario"]);
 				if($usuario){
 					if ($sql = $conexao->prepare("SELECT nome, dtNasc, email, telFixo, telCel, end, cid, est, cep, senha FROM professores WHERE usuario = ?")) {
-						$sql->bind_param('i', $usuario);
+						$sql->bind_param('s', $usuario);
 						$sql->execute();
 						$sql->bind_result($nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha);
 						$sql->fetch();
