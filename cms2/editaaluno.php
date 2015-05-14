@@ -14,8 +14,6 @@
 						$sql->execute();
 						$sql->bind_result($nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha, $grupos_idGrupos, $anos_idAno);
 						$sql->fetch();
-echo $nome;
-echo "aqui o nome";
 						if ($nome == ''){
 							echo "<div class='alert alert-warning'> Aluno não encontrado </div>";
 						} else {
