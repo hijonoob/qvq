@@ -14,9 +14,9 @@
 						$sql->bind_result($nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha);
 						$sql->fetch();
 						if ($nome == ''){
-							echo "<div class='alert alert-warning'> Professor não encontrado </div>";
+							echo "<div class='alert alert-warning'> " . _( 'Teacher not found ') . " </div>";
 						} else {
-							echo "<div class='alert alert-info'> Professor encontrado: USUÁRIO ". $usuario . "</div>";
+							echo "<div class='alert alert-info'> " . _( 'Teacher found: USER ') . " ". $usuario . "</div>";
 						}
 						$sql->close();
 					}
@@ -35,12 +35,12 @@
 					$senha = $_POST['senha'];
 					
 					if ($usuario=='' || $nome=='' || $dtNasc=='' || $email=='' || $telFixo=='' ||  $telCel=='' || $end=='' || $cid=='' || $est=='' || $cep=='' || $senha=='') {
-						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> " . _( 'All fields must be typed') . " </div>";
 					} else {
 						$param = $conexao->prepare("UPDATE professores SET nome = ?, dtNasc = ?, email = ?, telFixo = ?, telCel = ?, end = ?, cid = ?, est = ?, cep = ?, senha = ? WHERE usuario = ?");
 						$param->bind_param('sisiissssss', $nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha, $usuario);
 						if ($param->execute()) {
-							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> " . _( 'Changed successfully') . " </div>";
 							$param->close();
 						}
 					}

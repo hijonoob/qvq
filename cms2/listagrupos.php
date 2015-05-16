@@ -58,8 +58,8 @@
                         if($linha['idGrupo']!=999999){
   						  echo '<tr>';
 						  echo '<td>' . $linha['idGrupo'] . '</td>';
-						  echo '<td> <a href="editagrupoprof.php?grupo='. $linha['idGrupo'].'">Editar</a></td>';
-						  echo '<td> <a href="editagrupoaluno.php?grupo='. $linha['idGrupo'].'">Editar</a></td>';
+						  echo '<td> <a href="editagrupoprof.php?grupo='. $linha['idGrupo'].'">' . _( 'Edit') . '</a></td>';
+						  echo '<td> <a href="editagrupoaluno.php?grupo='. $linha['idGrupo'].'">' . _( 'Edit') . '</a></td>';
 						  echo '</tr>';
                         }
 					}

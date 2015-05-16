@@ -15,9 +15,9 @@
 						$sql->bind_result($usuario, $perfil, $nome, $razao, $cnpj, $end, $cid, $est, $cep, $telFixo, $contato, $senha);
 						$sql->fetch();
 						if ($nome == ''){
-							echo "<div class='alert alert-warning'> Escola não encontrada </div>";
+							echo "<div class='alert alert-warning'> " . _( 'School not found') . " </div>";
 						} else {
-							echo "<div class='alert alert-info'> Escola encontrada: ID ". $idEscolas . "</div>";
+							echo "<div class='alert alert-info'> " . _( 'School found: ID ') . "". $idEscolas . "</div>";
 						}
 						$sql->close();
 					}
@@ -38,12 +38,12 @@
 					$senha = $_POST['senha'];
 					
 					if ($usuario=='' || $perfil=='' || $nome=='' || $razao=='' || $cnpj=='' || $end=='' || $cid=='' || $est=='' || $cep=='' || $telFixo=='' || $contato=='' || $senha=='') {
-						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> " . _( 'All data must be typed') . " </div>";
 					} else {
 						$param = $conexao->prepare("UPDATE escolas SET usuario = ?, perfil = ?, nome = ?, razao = ?, cnpj = ?, end = ?, cid = ?, est = ?, cep = ?, telFixo = ?, contato = ?, senha = ? WHERE idEscolas = ?");
 						$param->bind_param('ssssssssiissi', $usuario, $perfil, $nome, $razao, $cnpj, $end, $cid, $est, $cep, $telFixo, $contato, $senha, $idEscolas);
 						if ($param->execute()) {
-							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> " . _( 'Changed successfully') . " </div>";
 							$param->close();
 						}
 					}
@@ -75,7 +75,7 @@
 					<input type="text" placeholder="<?php echo _( 'contact name to talk to the school'); ?> " class="form-control" name="contato" value=<?php echo "'". $contato . "'"; ?>/>
 				<label for="senha"> <?php echo _( 'Password'); ?>: </label>
 					<input type="text" placeholder="<?php echo _( 'login access password'); ?> s" class="form-control" name="senha" value=<?php echo "'". $senha . "'"; ?>/>
-				<input type="submit" name="editar" value="Editar escola" class="btn btn-default" />	
+				<input type="submit" name="editar" value="<?php echo  _( 'Edit school'); ?> "" class="btn btn-default" />	
 			</form>		
 		</div>	
 

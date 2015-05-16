@@ -42,9 +42,9 @@
               $listaAlunosAntiga = trim($_POST['listaAlunosAntiga']);
               
               if ($listaAlunosNova=='') {
-                echo "<div class='alert alert-warning'> Erro ao salvar dados - Não permitido remover todos os alunos. </div>";
+                echo "<div class='alert alert-warning'> " . _( 'Error saving data - Not allowed to remove all students') . " </div>";
               } else if ($listaAlunosAntiga == $listaAlunosNova) 
-                echo "<div class='alert alert-warning'> Não houve alteração no grupo. </div>";
+                echo "<div class='alert alert-warning'> " . _( 'No change was made') . " </div>";
               else {
                 $listAlunAnt = explode(" ", $listaAlunosAntiga);
                 $listAlunNov = explode(" ", $listaAlunosNova);
@@ -54,7 +54,7 @@
                       $param = $conexao->prepare("UPDATE alunos SET grupos_idGrupos = ? WHERE usuario = ?");
                       $param->bind_param('is', $idGrupo, $aluno);
                       if ($param->execute()) {
-                        echo "<div class='alert alert-success'> Aluno " .  $aluno . " adicionado ao grupo " . $idGrupo ." </div>";
+                        echo "<div class='alert alert-success'> " . _( 'student') . " " .  $aluno  . _( ' added to group ')  . $idGrupo ." </div>";
                         $param->close();
                       }
                   }
@@ -65,7 +65,7 @@
                     $param = $conexao->prepare("UPDATE alunos SET grupos_idGrupos = 999999 WHERE usuario = ?");
                     $param->bind_param('s', $aluno);
                     if ($param->execute()) {
-                      echo "<div class='alert alert-warning'> Aluno " .  $aluno . " removido do grupo " . $idGrupo .". </div>";
+                      echo "<div class='alert alert-warning'> " . _( 'Student') . " " .  $aluno . " " . _( 'removed from group') . " " . $idGrupo .". </div>";
                       $param->close();
                     }
                   }
@@ -113,10 +113,10 @@
         </tr>
         <tr>
             <td>
-              <p><input id="moveright" type="button" value="Remover do grupo" onclick="move_list_items('from_select_list','to_select_list');" /></p>
+              <p><input id="moveright" type="button" value="<?php echo _( 'Remove from group'); ?>" onclick="move_list_items('from_select_list','to_select_list');" /></p>
             </td>
             <td>
-              <p><input id="moveleft" type="button" value="Adicionar ao grupo" onclick="move_list_items('to_select_list','from_select_list');" /></p>
+              <p><input id="moveleft" type="button" value="<?php echo _( 'Add to group'); ?>" onclick="move_list_items('to_select_list','from_select_list');" /></p>
             </td>
           </tr>
         <tr>

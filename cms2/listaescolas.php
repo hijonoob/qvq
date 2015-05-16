@@ -24,7 +24,7 @@
 						echo '<td>' . $linha['nome'] .' </td>';
 						echo '<td>' . $linha['contato'] .'</td>';
 						echo '<td>' . $linha['telFixo'] .'</td>';
-						echo '<td> <a href="editaescola.php?id='. $linha['idEscolas'].'">Editar</a></td>';
+						echo '<td> <a href="editaescola.php?id='. $linha['idEscolas'].'">' . _( 'Edit') . '</a></td>';
 						echo '<td> <a class="removeescola" href="deletaescola.php?id='. $linha['idEscolas'].'">X</a></td>';
 						echo '</tr>';
 					}

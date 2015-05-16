@@ -42,9 +42,9 @@
               $listaProfessoresAntiga = trim($_POST['listaProfessoresAntiga']);
               
               if ($listaProfessoresAntiga=='' || $listaProfessoresNova=='') {
-                echo "<div class='alert alert-warning'> Erro ao salvar dados - Não permitido remover todos os professores. </div>";
+                echo "<div class='alert alert-warning'> " . _( 'Error saving data - Not allowed to remove all teachers') . " </div>";
               } else if ($listaProfessoresAntiga == $listaProfessoresNova) 
-                echo "<div class='alert alert-warning'> Não houve alteração no grupo. </div>";
+                echo "<div class='alert alert-warning'> " . _( 'No change was made') . " </div>";
               else {
                 $listProfAnt = explode(" ", $listaProfessoresAntiga);
                 $listProfNov = explode(" ", $listaProfessoresNova);
@@ -54,7 +54,7 @@
                       $param = $conexao->prepare('INSERT INTO ProfGrupos(professores_usuario, grupos_idGrupos) VALUES (?, ?)');
                       $param->bind_param('ss', $prof, $idGrupo);
                       if ($param->execute()) {
-                        echo "<div class='alert alert-success'> Professor " .  $prof . " adicionado ao grupo " . $idGrupo ." </div>";
+                        echo "<div class='alert alert-success'> " . _( 'Teacher') . " " .  $prof .  _( 'added to the group ')  . $idGrupo ." </div>";
                         $param->close();
                       } 
 
@@ -67,7 +67,7 @@
                       $sql->bind_param('s', $prof);
                       $sql->execute();
                       $sql->close();
-                      echo "<div class='alert alert-warning'> Professor " . $prof . " removido do grupo " .  $idGrupo ." </div>";
+                      echo "<div class='alert alert-warning'> " . _( 'Teacher') . " " . $prof . _( ' removed from group ') .  $idGrupo ." </div>";
                     }
                   }
                 }
@@ -135,10 +135,10 @@
         </tr>
         <tr>
             <td>
-              <p><input id="moveright" type="button" value="Remover do grupo" onclick="move_list_items('from_select_list','to_select_list');" /></p>
+              <p><input id="moveright" type="button" value=" <?php echo _( 'Remove from group'); ?>" onclick="move_list_items('from_select_list','to_select_list');" /></p>
             </td>
             <td>
-              <p><input id="moveleft" type="button" value="Adicionar ao grupo" onclick="move_list_items('to_select_list','from_select_list');" /></p>
+              <p><input id="moveleft" type="button" value="<?php echo _( 'Add to group'); ?> " onclick="move_list_items('to_select_list','from_select_list');" /></p>
             </td>
           </tr>
         <tr>

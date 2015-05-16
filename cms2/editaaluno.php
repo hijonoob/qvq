@@ -15,9 +15,9 @@
 						$sql->bind_result($nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha, $grupos_idGrupos, $anos_idAno);
 						$sql->fetch();
 						if ($nome == ''){
-							echo "<div class='alert alert-warning'> Aluno não encontrado </div>";
+							echo "<div class='alert alert-warning'> " . _( 'Student not found') . "</div>";
 						} else {
-							echo "<div class='alert alert-info'> Aluno encontrado: USUÁRIO ". $usuario . "</div>";
+							echo "<div class='alert alert-info'> " . _( 'Student found: USER ') . " ". $usuario . "</div>";
 						}
 						$sql->close();
 					}
@@ -38,12 +38,12 @@
 					$anos_idAno = $_POST['anos_idAno'];
 					
 					if ($usuario=='' || $nome=='' || $dtNasc=='' || $email=='' || $telFixo=='' ||  $telCel=='' || $end=='' || $cid=='' || $est=='' || $cep=='' || $senha=='' || $grupos_idGrupos=='' || $anos_idAno=='') {
-						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> " . _( 'All fields must be typed') . " </div>";
 					} else {
 						$param = $conexao->prepare("UPDATE alunos SET nome = ?, dtNasc = ?, email = ?, telFixo = ?, telCel = ?, end = ?, cid = ?, est = ?, cep = ?, senha = ?, grupos_idGrupos = ?, anos_idAno = ? WHERE usuario = ?");
 						$param->bind_param('sisiisssssiis', $nome, $dtNasc, $email, $telFixo, $telCel, $end, $cid, $est, $cep, $senha, $grupos_idGrupos, $anos_idAno, $usuario);
 						if ($param->execute()) {
-							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> " . _( 'Changed successfully') . " </div>";
 							$param->close();
 						}
 					}

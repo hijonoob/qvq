@@ -25,7 +25,7 @@
 						echo '<td>' . $linha['nome'] .' </td>';
 						echo '<td>' . $linha['qtPergCriad'] .'</td>';
 						echo '<td>' . $linha['pontos'] .'</td>';
-						echo '<td> <a href="editaprofessor.php?usuario='. $linha['usuario'].'">Editar</a></td>';
+						echo '<td> <a href="editaprofessor.php?usuario='. $linha['usuario'].'">' . _( 'Edit') . '</a></td>';
 						echo '<td> <a class="removeprofessor" href="deletaprofessor.php?usuario='. $linha['usuario'].'">X</a></td>';
 						echo '</tr>';
 					}
