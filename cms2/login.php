@@ -6,7 +6,7 @@
           $usuario = trim(strip_tags($_POST['usuario'])); 
           $senha = trim(strip_tags($_POST['senha']));
               if ($usuario=='' || $senha=='') {
-                echo "<div class='alert alert-warning'> Usuário e senha devem ser preenchidos. </div>";
+                echo "<div class='alert alert-warning'> " . _( 'User and password must be typed') . " </div>";
               } else {
                 if ($sql = $conexao->prepare("SELECT senha, perfil, idEscolas, nome FROM escolas WHERE usuario = ?")) {
                   $sql->bind_param('s', $usuario);
@@ -14,7 +14,7 @@
                   $sql->bind_result($senhacomparacao, $permissao, $idEscolas, $nome);
                   $sql->fetch();
                   if ($senhacomparacao == ''){
-                    echo "<div class='alert alert-danger'> Erro ao conectar, favor tentar novamente </div>"; // Usuário não encontrado
+                    echo "<div class='alert alert-danger'> " . _( 'Error conecting, please try again') . " </div>"; // Usuário não encontrado
                   } else {
                       //$senhacomp = crypt($senha, $senhacomparao);
                       if($senhacomparacao == $senha) {
@@ -24,7 +24,7 @@
                         $_SESSION['nome']=$nome;
                         //echo '<script> location.reload(); </script>';
                       } else {
-                          echo "<div class='alert alert-danger'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
+                          echo "<div class='alert alert-danger'>" . _( 'Error conecting, please try again') . "</div>"; // senha incorreta
                       }
                   }
                   $sql->close();
@@ -32,7 +32,7 @@
                 }
               }
       if(isset($_SESSION['permissao'])) {
-        echo "<div class='alert alert-success'>Você está logado - recarregue a página para ver os menus </div>";
+        echo "<div class='alert alert-success'>" . _( 'You are logged, please reload to view menus') . " </div>";
       }
       ?>
       <div id="login">
