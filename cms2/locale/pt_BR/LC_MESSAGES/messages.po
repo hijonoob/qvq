@@ -411,13 +411,25 @@ msgstr "Professor sem grupo"
 msgid "Save teacher changes"
 msgstr "Salvar mudanças do professor"
 
+#: login.php:9
+msgid "User and password must be typed"
+msgstr "Usuário e senha devem ser preenchidos"
+
+#: login.php:17 login.php:27
+msgid "Error conecting, please try again"
+msgstr "Erro ao conectar, por favor tente novamente"
+
+#: login.php:35
+msgid "You are logged, please reload to view menus"
+msgstr "Você está logado, por favor recarregue a página para ver os menus"
+
 #: login.php:42
 msgid "Type your user name"
 msgstr "Digite seu nome de usuário"
 
 #: login.php:46
 msgid "password"
-msgstr "Senha"
+msgstr "senha"
 
 #: login.php:48
 msgid "Log in"
