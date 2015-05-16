@@ -1,15 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-14 07:17-0400\n"
+"POT-Creation-Date: 2015-05-15 21:21-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: pt-BR\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: listaaluno.php:12 listaaluno.php:13
+#: listaaluno.php:6 listaaluno.php:7
 msgid "A string to be translated would go here"
-msgstr "aquiii2"
+msgstr ""
+
+#: listaaluno.php:11
+msgid "List students"
+msgstr ""
+
+#: listaaluno.php:15
+msgid "User"
+msgstr ""
+
+#: listaaluno.php:16
+msgid "Name"
+msgstr ""
+
+#: listaaluno.php:17
+msgid "Grade"
+msgstr ""
+
+#: listaaluno.php:18
+msgid "Score"
+msgstr ""
+
+#: listaaluno.php:19
+msgid "Edit"
+msgstr ""
+
+#: listaaluno.php:20
+msgid "Remove"
+msgstr ""

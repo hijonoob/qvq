@@ -36,3 +36,31 @@ msgstr "trabalho de conclusão de curso de"
 msgid "Technology in Game Development from"
 msgstr "Tecnologia em Jogos Digitais da"
 
+#: listaaluno.php:11
+msgid "List students"
+msgstr "Lista alunos"
+
+#: listaaluno.php:15
+msgid "User"
+msgstr "Usuário"
+
+#: listaaluno.php:16
+msgid "Name"
+msgstr "Nome"
+
+#: listaaluno.php:17
+msgid "Grade"
+msgstr "Ano"
+
+#: listaaluno.php:18
+msgid "Score"
+msgstr "Pontos"
+
+#: listaaluno.php:19
+msgid "Edit"
+msgstr "Editar"
+
+#: listaaluno.php:20
+msgid "Remove"
+msgstr "Remover"
+

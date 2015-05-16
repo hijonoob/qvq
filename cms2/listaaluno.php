@@ -1,12 +1,6 @@
 <?php
 	include 'templates/checagestor.php';
 	include 'templates/header.php';
-
-
-echo gettext("A string to be translated would go here");
-echo _( 'A string to be translated would go here');
-
-
 ?>
 			<h3> <?php echo _( 'List students'); ?> </h3>
 			<table class="table table-striped" width="647">
@@ -30,7 +24,7 @@ echo _( 'A string to be translated would go here');
 						echo '<td>' . $linha['nome'] .' </td>';
 						echo '<td>' . $linha['anos_IdAno'] .'</td>';
 						echo '<td>' . $linha['pontos'] .'</td>';
-						echo '<td> <a href="editaaluno.php?usuario='. $linha['usuario'].'"> _( "Remove"); </a></td>';
+						echo '<td> <a href="editaaluno.php?usuario='. $linha['usuario'].'"> Remove </a></td>';
 						echo '<td> <a class="removealuno" href="deletaaluno.php?usuario='. $linha['usuario'].'">X</a></td>';
 						echo '</tr>';
 					}
