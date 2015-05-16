@@ -1,38 +1,38 @@
         <div class="navbar navbar-default" role="navigation">
           <div class="container">
-            <p class="navbar-brand">Gestão de Professores</p>
+            <p class="navbar-brand"><?php echo _( 'Teacher management'); ?></p>
               <ul class="nav navbar-nav">
                   <li>
-                      <a href="adicionaprofessor.php">Adicionar professor</a>
+                      <a href="adicionaprofessor.php"><?php echo _( 'Add teacher'); ?></a>
                   </li>
                   <li>
-                      <a href="listaprofessores.php">Lista professores</a>
+                      <a href="listaprofessores.php"><?php echo _( 'List teachers'); ?></a>
                   </li>
               </ul>
          </div>
         </div>
         <div class="navbar navbar-default" role="navigation">
           <div class="container">
-            <p class="navbar-brand">Gestão de Alunos</p>
+            <p class="navbar-brand"><?php echo _( 'Student management'); ?></p>
               <ul class="nav navbar-nav">
                   <li>
-                      <a href="adicionaaluno.php">Adicionar aluno</a>
+                      <a href="adicionaaluno.php"><?php echo _( 'Add student'); ?></a>
                   </li>
                   <li>
-                      <a href="listaaluno.php">Lista alunos</a>
+                      <a href="listaaluno.php"><?php echo _( 'List students'); ?></a>
                   </li>
               </ul>
          </div>
         </div>
         <div class="navbar navbar-default" role="navigation">
           <div class="container">
-            <p class="navbar-brand">Gestão de Grupos</p>
+            <p class="navbar-brand"><?php echo _( 'Group management'); ?></p>
               <ul class="nav navbar-nav">
                   <li>
-                      <a href="adicionagrupo.php">Adicionar grupo</a>
+                      <a href="adicionagrupo.php"><?php echo _( 'Add groups'); ?></a>
                   </li>
                   <li>
-                      <a href="listagrupos.php">Lista grupos</a>
+                      <a href="listagrupos.php"><?php echo _( 'List groups'); ?></a>
                   </li>
               </ul>
          </div>

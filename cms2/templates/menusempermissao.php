@@ -11,7 +11,7 @@
 	          </li>
 -->
 	          <li>
-	              <a>  Olá, <?php echo $_SESSION['nome']; ?></a>
+	              <a>  <?php echo _( 'Hello'); ?>, <?php echo $_SESSION['nome']; ?></a>
 	          </li>
 
                   <li>

@@ -1,12 +1,12 @@
 	<div class="navbar navbar-default" role="navigation">
 	  <div class="container">
-	    <p class="navbar-brand">Gestão de Escolas</p>
+	    <p class="navbar-brand"><?php echo _( 'School management'); ?></p>
 	      <ul class="nav navbar-nav">
 	          <li>
-	              <a href="adicionaescola.php">Adicionar escola</a>
+	              <a href="adicionaescola.php"><?php echo _( 'Add school'); ?></a>
 	          </li>
 	          <li>
-	              <a href="listaescolas.php">Lista escolas</a>
+	              <a href="listaescolas.php"><?php echo _( 'List schools'); ?></a>
 	          </li>
 	      </ul>
 	 </div>
