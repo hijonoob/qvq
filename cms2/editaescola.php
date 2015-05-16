@@ -2,7 +2,7 @@
 	include 'templates/checaadmin.php';
 	include 'templates/header.php';
 ?>
-			<h3> Editar escola </h3>
+			<h3> <?php echo _( 'Edit school'); ?> </h3>
 			
 			<?php
 				include 'restrito/conexao.php';
@@ -51,30 +51,30 @@
 			?>
 
 			<form action="" method="POST" id="editaescola">
-				<label for="usuario"> Usuário: </label>
-					<input type="text" placeholder="usuário para login" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
-				<label for="perfil"> Perfil: </label>
-					<input type="text" placeholder="perfil de acesso ao CMS 2 para escola 3 para admin" class="form-control" name="perfil" value=<?php echo "'". $perfil . "'"; ?>/>
-				<label for="nome"> Nome: </label>
-					<input type="text" placeholder="nome da escola" class="form-control" name="nome" value=<?php echo "'". $nome . "'"; ?> />
-				<label for="razao"> Razão social: </label>
-					<input type="text" placeholder="razão social da escola" class="form-control" name="razao" value=<?php echo "'". $razao . "'"; ?> />
-				<label for="cnpj"> CNPJ: </label>
-					<input type="text" placeholder="cnpj da escola" class="form-control" name="cnpj" value=<?php echo "'". $cnpj . "'"; ?>/>
-				<label for="end"> Endereço: </label>
-					<input type="text" placeholder="endereço completo da escola" class="form-control" name="end" value=<?php echo "'". $end . "'"; ?>/>
-				<label for="cid"> Cidade: </label>
-					<input type="text" placeholder="cidade da escola" class="form-control" name="cid" value=<?php echo "'". $cid . "'"; ?>/>
-				<label for="est"> Estado: </label>
-					<input type="text" placeholder="estado da escola" class="form-control" name="est" value=<?php echo "'". $est . "'"; ?>/>
-				<label for="cep"> CEP: </label>
-					<input type="text" placeholder="cep da escola" class="form-control" name="cep" value=<?php echo "'". $cep . "'"; ?> />
-				<label for="telFixo"> Telefone fixo: </label>
-					<input type="text" placeholder="telefone fixo da escola" class="form-control" name="telFixo" value=<?php echo "'". $telFixo . "'"; ?>/>
-				<label for="contato"> Nome do contato: </label>
-					<input type="text" placeholder="nome do contato na escola" class="form-control" name="contato" value=<?php echo "'". $contato . "'"; ?>/>
-				<label for="senha"> Senha: </label>
-					<input type="text" placeholder="senha para acesso de login da escola" class="form-control" name="senha" value=<?php echo "'". $senha . "'"; ?>/>
+				<label for="usuario"> <?php echo _( 'User'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'login user'); ?>" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
+				<label for="perfil"> <?php echo _( 'Profile'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'access profile, 2 to school, 3 to admin'); ?>" class="form-control" name="perfil" value=<?php echo "'". $perfil . "'"; ?>/>
+				<label for="nome"> <?php echo _( 'Name'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'school name'); ?>" class="form-control" name="nome" value=<?php echo "'". $nome . "'"; ?> />
+				<label for="razao"> <?php echo _( 'Registered Name'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'registered name of the school'); ?>" class="form-control" name="razao" value=<?php echo "'". $razao . "'"; ?> />
+				<label for="cnpj"> <?php echo _( 'Registered Number'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'registered number of the school'); ?> " class="form-control" name="cnpj" value=<?php echo "'". $cnpj . "'"; ?>/>
+				<label for="end"> <?php echo _( 'Address'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'complete address of the school'); ?> " class="form-control" name="end" value=<?php echo "'". $end . "'"; ?>/>
+				<label for="cid"> <?php echo _( 'City'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'city of the school'); ?> " class="form-control" name="cid" value=<?php echo "'". $cid . "'"; ?>/>
+				<label for="est"> <?php echo _( 'State'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'state of the school'); ?> " class="form-control" name="est" value=<?php echo "'". $est . "'"; ?>/>
+				<label for="cep"> <?php echo _( 'Zip Code'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'zip code of the school'); ?> " class="form-control" name="cep" value=<?php echo "'". $cep . "'"; ?> />
+				<label for="telFixo"> <?php echo _( 'Phone'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'phone of the school'); ?> " class="form-control" name="telFixo" value=<?php echo "'". $telFixo . "'"; ?>/>
+				<label for="contato"> <?php echo _( 'Contact'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'contact name to talk to the school'); ?> " class="form-control" name="contato" value=<?php echo "'". $contato . "'"; ?>/>
+				<label for="senha"> <?php echo _( 'Password'); ?>: </label>
+					<input type="text" placeholder="<?php echo _( 'login access password'); ?> s" class="form-control" name="senha" value=<?php echo "'". $senha . "'"; ?>/>
 				<input type="submit" name="editar" value="Editar escola" class="btn btn-default" />	
 			</form>		
 		</div>	

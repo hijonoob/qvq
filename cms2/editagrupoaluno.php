@@ -32,7 +32,7 @@
   td { width: 50%; }
 </style>
 
-      <h3> Editar Alunos do Grupo <?php echo $idGrupo; ?> </h3>
+      <h3> <?php echo _( 'Edit students from Group '); ?> <?php echo $idGrupo; ?> </h3>
       <table>
 
         <?php
@@ -76,8 +76,8 @@
 
 
         <tr>
-            <td>Alunos do grupo <?php echo $idGrupo; ?> </td>
-            <td>Alunos sem grupo</td>
+            <td><?php echo _( 'Students grom group '); ?> <?php echo $idGrupo; ?> </td>
+            <td><?php echo _( 'Students without group'); ?></td>
         </tr>
         <tr>
             <td>
@@ -123,7 +123,7 @@
             <td colspan="2">
               <p>
                 <form action="" method="POST" id="salvaAlunosNoGrupo" name="salvaAlunosNoGrupo">
-                  <input id="salvarAlunosGrupoInput" name="salvarAlunosGrupoInput" type="submit" value="Salvar alteração de alunos" />
+                  <input id="salvarAlunosGrupoInput" name="salvarAlunosGrupoInput" type="submit" value="<?php echo _( 'Save students changes'); ?>" />
                   <input type="hidden" name="listaAlunosAntiga" id="listaAlunosAntiga" value=" <?php echo $alunoListar ?> " />
                   <input type="hidden" name="listaAlunosNova" id="listaAlunosNova" value=" <?php echo $alunoListar ?> " />
                 </form>
