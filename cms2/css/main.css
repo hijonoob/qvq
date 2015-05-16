@@ -194,6 +194,11 @@ body.contraste .rss_icon {
     text-indent: -99999px;    
 }
 
+
+a#link-lingua {
+    font-size: 0.8em;
+}
+
 /* Home */
 
 .jogo{

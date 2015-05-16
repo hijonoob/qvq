@@ -1,7 +1,19 @@
 	</div>
 	<div class="navbar navbar-default" role="navigation" id="anavegacao">
 	  <div class="container">
-	  	<ul id="acessibilidade" class="nav navbar-nav navbar-right">
+	  	<ul id="lingua" class="nav navbar-nav navbar-right">
+			<li>
+				<?php 
+					if($_SESSION['lang']=="pt_BR") {
+						echo '<a href="?lang=en" id="link-lingua"> English Version </a>';
+					} else {
+						echo '<a href="?lang=pt_BR" id="link-lingua"> Versão em Português </a>';
+					}
+				?>
+		    </li>
+		</ul>
+	  	
+                <ul id="acessibilidade" class="nav navbar-nav navbar-right">
 			<li>
 		        <a accesskey="1" href="#aconteudo" id="link-conteudo">
 		            <?php echo _( 'Go to content'); ?>

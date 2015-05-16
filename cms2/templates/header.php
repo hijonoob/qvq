@@ -27,9 +27,24 @@
 <script type="text/javascript" src="tinymce/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 
+
 <?php
-setlocale( LC_MESSAGES, 'pt_BR');
-putenv("LANGUAGE=pt_BR.utf8");
+if(isset($_GET['lang'])){
+  $lang=$_GET['lang'];
+  if($lang=="" || $lang=="pt_BR" || $lang=="pt" || $lang != "en") {
+    $_SESSION['lang']="pt_BR";
+  } else {
+    $_SESSION['lang']="en";
+  }
+}    
+if(!isset($_SESSION['lang'])){
+  $_SESSION['lang']='pt_BR';
+}
+
+$lang=$_SESSION['lang'];
+$language = "LANGUAGE=".$lang.".utf8";
+setlocale( LC_MESSAGES, $lang);
+putenv($language);
 bindtextdomain("messages", './locale');
 bind_textdomain_codeset("messages", "utf-8");
 ?>
