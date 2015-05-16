@@ -2,13 +2,13 @@
 	include 'templates/checagestor.php';
 	include 'templates/header.php';
 ?>
-			<h3> Lista grupos </h3>
+			<h3> <?php echo _( 'List groups'); ?> </h3>
 			<table class="table table-striped" width="647">
 				<thead>
 					<tr>
-						<th>Grupo ID</th>
-						<th>Editar prof</th>
-						<th>Editar aluno</th>
+						<th><?php echo _( 'Group ID'); ?></th>
+						<th><?php echo _( 'Edit teacher'); ?></th>
+						<th><?php echo _( 'Edit student'); ?></th>
 					</tr>
 				</thead>
 				<tbody>

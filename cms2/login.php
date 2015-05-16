@@ -38,14 +38,14 @@
       <div id="login">
           <form action="login.php" method="post">  
             <div class="form-input login-form" >
-                <label for="usuario">Usuário</label>
-                <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Digite seu nome de usuário" autofocus></input>
+                <label for="usuario"><?php echo _( 'User'); ?></label>
+                <input name="usuario" type="text" class="form-control" id="usuario" placeholder="<?php echo _( 'Type your user name'); ?>" autofocus></input>
             </div>
             <div class="form-input login-form">
-                <label for="senha">Senha</label>
-                <input name="senha" type="password" class="form-control" id="senha" placeholder="Senha"></input><br>
+                <label for="senha"><?php echo _( 'Password'); ?></label>
+                <input name="senha" type="password" class="form-control" id="senha" placeholder="<?php echo _( 'password'); ?>"></input><br>
             </div>
-            <button type="submit" name="logar" class="btn btn-default">Entrar</button> 
+            <button type="submit" name="logar" class="btn btn-default"><?php echo _( 'Log in'); ?></button> 
           </form>
       </div>
   </div>

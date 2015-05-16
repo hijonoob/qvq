@@ -24,7 +24,7 @@
 						echo '<td>' . $linha['nome'] .' </td>';
 						echo '<td>' . $linha['anos_IdAno'] .'</td>';
 						echo '<td>' . $linha['pontos'] .'</td>';
-						echo '<td> <a href="editaaluno.php?usuario='. $linha['usuario'].'"> Remove </a></td>';
+						echo '<td> <a href="editaaluno.php?usuario='. $linha['usuario'].'"> Editar </a></td>';
 						echo '<td> <a class="removealuno" href="deletaaluno.php?usuario='. $linha['usuario'].'">X</a></td>';
 						echo '</tr>';
 					}

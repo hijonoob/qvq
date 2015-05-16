@@ -2,7 +2,7 @@
 	include 'templates/checagestor.php';
 	include 'templates/header.php';
 ?>
-			<h3> Editar professor </h3>
+			<h3> <?php echo _( 'Edit teacher'); ?> </h3>
 			
 			<?php
 				include 'restrito/conexao.php';
@@ -48,29 +48,29 @@
 			?>
 
 			<form action="" method="POST" id="editaprofessor">
-				<label for="nome"> Nome: </label>
+				<label for="nome"> <?php echo _( 'Name'); ?>: </label>
 					<input type="text" placeholder="nome" class="form-control" name="nome" value=<?php echo "'". $nome . "'"; ?>/>
-				<label for="dtNasc"> Data de Nascimento: </label>
+				<label for="dtNasc"> <?php echo _( 'Birth date'); ?>: </label>
 					<input type="text" placeholder="data de nascimento" class="form-control" name="dtNasc" value=<?php echo "'". $dtNasc . "'"; ?>/>
 				<label for="email"> E-mail: </label>
 					<input type="text" placeholder="e-mail" class="form-control" name="email" value=<?php echo "'". $email . "'"; ?>/>
-				<label for="telFixo"> Telefone fixo: </label>
+				<label for="telFixo"> <?php echo _( 'Phone'); ?>: </label>
 					<input type="text" placeholder="telefone fixo" class="form-control" name="telFixo" value=<?php echo "'". $telFixo . "'"; ?>/>
-				<label for="telCel"> Telefone celular: </label>
+				<label for="telCel"> <?php echo _( 'Mobile Phone'); ?>: </label>
 					<input type="text" placeholder="telefone celular" class="form-control" name="telCel" value=<?php echo "'". $telCel . "'"; ?>/>
-				<label for="end"> Endereço: </label>
+				<label for="end"> <?php echo _( 'Address'); ?>: </label>
 					<input type="text" placeholder="endereço completo" class="form-control" name="end" value=<?php echo "'". $end . "'"; ?>/>
-				<label for="cid"> Cidade: </label>
+				<label for="cid"> <?php echo _( 'City'); ?>: </label>
 					<input type="text" placeholder="cidade" class="form-control" name="cid" value=<?php echo "'". $cid . "'"; ?>/>
-				<label for="est"> Estado: </label>
+				<label for="est"> <?php echo _( 'State'); ?>: </label>
 					<input type="text" placeholder="estado" class="form-control" name="est" value=<?php echo "'". $est . "'"; ?>/>
-				<label for="cep"> CEP: </label>
+				<label for="cep"> <?php echo _( 'Zip Code'); ?>: </label>
 					<input type="text" placeholder="cep" class="form-control" name="cep" value=<?php echo "'". $cep . "'"; ?> />
-				<label for="senha"> Senha: </label>
+				<label for="senha"> <?php echo _( 'Password'); ?>: </label>
 					<input type="text" placeholder="senha para acesso de login" class="form-control" name="senha" value=<?php echo "'". $senha . "'"; ?>/>
 
 
-				<input type="submit" name="editar" value="Editar professor" class="btn btn-default" />	
+				<input type="submit" name="editar" value="<?php echo _( 'Edit teacher'); ?>" class="btn btn-default" />	
 			</form>		
 		</div>	
 

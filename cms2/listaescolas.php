@@ -2,16 +2,16 @@
 	include 'templates/checaadmin.php';
 	include 'templates/header.php';
 ?>
-			<h3> Lista escolas </h3>
+			<h3> <?php echo _( 'List schools'); ?> </h3>
 			<table class="table table-striped" width="647">
 				<thead>
 					<tr>
 						<th>Id</th>
-						<th>Nome</th>
-						<th>Contato</th>
-						<th>Telefone</th>
-						<th>Editar</th>
-						<th>Remover</th>
+						<th><?php echo _( 'Name'); ?></th>
+						<th><?php echo _( 'Contact'); ?></th>
+						<th><?php echo _( 'Phone'); ?></th>
+						<th><?php echo _( 'Edit'); ?></th>
+						<th><?php echo _( 'Remove'); ?></th>
 					</tr>
 				</thead>
 				<tbody>

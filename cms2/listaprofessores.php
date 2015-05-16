@@ -2,16 +2,16 @@
 	include 'templates/checagestor.php';
 	include 'templates/header.php';
 ?>
-			<h3> Lista professores </h3>
+			<h3> <?php echo _( 'List teachers'); ?> </h3>
 			<table class="table table-striped" width="647">
 				<thead>
 					<tr>
-						<th>Usuário</th>
-						<th>Nome</th>
-						<th>Perg Criadas</th>
-						<th>Pontos</th>
-						<th>Editar</th>
-						<th>Remover</th>
+						<th><?php echo _( 'User'); ?></th>
+						<th><?php echo _( 'Name'); ?></th>
+						<th><?php echo _( 'Created questions'); ?></th>
+						<th><?php echo _( 'Score'); ?></th>
+						<th><?php echo _( 'Edit'); ?></th>
+						<th><?php echo _( 'Remove'); ?></th>
 					</tr>
 				</thead>
 				<tbody>

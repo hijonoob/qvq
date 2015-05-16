@@ -13,7 +13,7 @@
       <div class="jogo">
           <div class="container">
                 <div class="registrese">
-                  <h3>Entre em contato para registrar a sua escola e ter acesso a versão demo do jogo</h3>
+                  <h3><?php echo _( 'Contact us to register your school and have access to the game version of the game'); ?></h3>
                   <a href="mailto:contato@quizvsquiz.com.br" role="button" class="btn btn-lg btn-primary">cadastro@quizvsquiz.com.br</a>
                 </div>
 
