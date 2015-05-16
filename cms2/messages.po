@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-15 21:21-0400\n"
+"POT-Creation-Date: 2015-05-15 22:37-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,524 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: listaaluno.php:6 listaaluno.php:7
-msgid "A string to be translated would go here"
+#: listaescolas.php:5 templates/menuadmin.php:9
+msgid "List schools"
 msgstr ""
 
-#: listaaluno.php:11
-msgid "List students"
-msgstr ""
-
-#: listaaluno.php:15
-msgid "User"
-msgstr ""
-
-#: listaaluno.php:16
+#: listaescolas.php:10 editaescola.php:58 editaprofessor.php:51
+#: listaaluno.php:10 adicionaescola.php:42 adicionaprofessor.php:40
+#: adicionaaluno.php:41 editaaluno.php:54 listaprofessores.php:10
 msgid "Name"
 msgstr ""
 
-#: listaaluno.php:17
-msgid "Grade"
+#: listaescolas.php:11 editaescola.php:74 adicionaescola.php:60
+msgid "Contact"
 msgstr ""
 
-#: listaaluno.php:18
-msgid "Score"
+#: listaescolas.php:12 editaescola.php:72 editaprofessor.php:57
+#: adicionaescola.php:58 adicionaprofessor.php:46 adicionaaluno.php:47
+#: editaaluno.php:60
+msgid "Phone"
 msgstr ""
 
-#: listaaluno.php:19
+#: listaescolas.php:13 listaescolas.php:27 listagrupos.php:61
+#: listagrupos.php:62 listaaluno.php:13 listaaluno.php:27
+#: listaprofessores.php:13 listaprofessores.php:28
 msgid "Edit"
 msgstr ""
 
-#: listaaluno.php:20
+#: listaescolas.php:14 listaaluno.php:14 listaprofessores.php:14
 msgid "Remove"
+msgstr ""
+
+#: templates/menugestao.php:3
+msgid "Teacher management"
+msgstr ""
+
+#: templates/menugestao.php:6 adicionaprofessor.php:5 adicionaprofessor.php:61
+msgid "Add teacher"
+msgstr ""
+
+#: templates/menugestao.php:9 listaprofessores.php:5
+msgid "List teachers"
+msgstr ""
+
+#: templates/menugestao.php:16
+msgid "Student management"
+msgstr ""
+
+#: templates/menugestao.php:19 adicionaaluno.php:5 adicionaaluno.php:64
+msgid "Add student"
+msgstr ""
+
+#: templates/menugestao.php:22 listaaluno.php:5
+msgid "List students"
+msgstr ""
+
+#: templates/menugestao.php:29
+msgid "Group management"
+msgstr ""
+
+#: templates/menugestao.php:32
+msgid "Add groups"
+msgstr ""
+
+#: templates/menugestao.php:35 listagrupos.php:5
+msgid "List groups"
+msgstr ""
+
+#: templates/menu.php:7
+msgid "Go to content"
+msgstr ""
+
+#: templates/menu.php:13
+msgid "Go to menu"
+msgstr ""
+
+#: templates/menu.php:19
+msgid "Go to footer"
+msgstr ""
+
+#: templates/menu.php:25
+msgid "High contrast"
+msgstr ""
+
+#: templates/footer.php:4
+msgid "Management Area QvQ"
+msgstr ""
+
+#: templates/footer.php:7
+msgid "Register by sending your data to:"
+msgstr ""
+
+#: templates/footer.php:13
+msgid "QvQ - Quiz Vs Quiz"
+msgstr ""
+
+#: templates/footer.php:14
+msgid "Project developed as"
+msgstr ""
+
+#: templates/footer.php:15
+msgid "a course conclusion papper of"
+msgstr ""
+
+#: templates/footer.php:16
+msgid "Technology in Game Development from"
+msgstr ""
+
+#: templates/menuadmin.php:3
+msgid "School management"
+msgstr ""
+
+#: templates/menuadmin.php:6 adicionaescola.php:5 adicionaescola.php:65
+msgid "Add school"
+msgstr ""
+
+#: templates/menusempermissao.php:14
+msgid "Hello"
+msgstr ""
+
+#: listagrupos.php:9 editaaluno.php:75
+msgid "Group ID"
+msgstr ""
+
+#: listagrupos.php:10 editaprofessor.php:5 editaprofessor.php:73
+msgid "Edit teacher"
+msgstr ""
+
+#: listagrupos.php:11 editaaluno.php:5 editaaluno.php:81
+msgid "Edit student"
+msgstr ""
+
+#: editaescola.php:5 editaescola.php:78
+msgid "Edit school"
+msgstr ""
+
+#: editaescola.php:18
+msgid "School not found"
+msgstr ""
+
+#: editaescola.php:20
+msgid "School found: ID "
+msgstr ""
+
+#: editaescola.php:41
+msgid "All data must be typed"
+msgstr ""
+
+#: editaescola.php:46 editaprofessor.php:43 adicionaescola.php:29
+#: editaaluno.php:46
+msgid "Changed successfully"
+msgstr ""
+
+#: editaescola.php:54 listaaluno.php:9 adicionaescola.php:38 login.php:41
+#: adicionaprofessor.php:38 adicionaaluno.php:39 listaprofessores.php:9
+msgid "User"
+msgstr ""
+
+#: editaescola.php:55
+msgid "login user"
+msgstr ""
+
+#: editaescola.php:56 adicionaescola.php:40
+msgid "Profile"
+msgstr ""
+
+#: editaescola.php:57
+msgid "access profile, 2 to school, 3 to admin"
+msgstr ""
+
+#: editaescola.php:59
+msgid "school name"
+msgstr ""
+
+#: editaescola.php:60
+msgid "Registered Name"
+msgstr ""
+
+#: editaescola.php:61 adicionaescola.php:46
+msgid "registered name of the school"
+msgstr ""
+
+#: editaescola.php:62
+msgid "Registered Number"
+msgstr ""
+
+#: editaescola.php:63
+msgid "registered number of the school"
+msgstr ""
+
+#: editaescola.php:64 editaprofessor.php:61 adicionaescola.php:50
+#: adicionaprofessor.php:50 adicionaaluno.php:51 editaaluno.php:64
+#: editaaluno.php:65
+msgid "Address"
+msgstr ""
+
+#: editaescola.php:65
+msgid "complete address of the school"
+msgstr ""
+
+#: editaescola.php:66 editaprofessor.php:63 adicionaescola.php:52
+#: adicionaprofessor.php:52 adicionaaluno.php:53 editaaluno.php:66
+msgid "City"
+msgstr ""
+
+#: editaescola.php:67 adicionaescola.php:53
+msgid "city of the school"
+msgstr ""
+
+#: editaescola.php:68 editaprofessor.php:65 adicionaescola.php:54
+#: adicionaprofessor.php:54 adicionaaluno.php:55 editaaluno.php:68
+msgid "State"
+msgstr ""
+
+#: editaescola.php:69 adicionaescola.php:55
+msgid "state of the school"
+msgstr ""
+
+#: editaescola.php:70 editaprofessor.php:67
+msgid "Zip Code"
+msgstr ""
+
+#: editaescola.php:71 adicionaescola.php:57
+msgid "zip code of the school"
+msgstr ""
+
+#: editaescola.php:73
+msgid "phone of the school"
+msgstr ""
+
+#: editaescola.php:75
+msgid "contact name to talk to the school"
+msgstr ""
+
+#: editaescola.php:76 editaprofessor.php:69 adicionaescola.php:62 login.php:45
+#: adicionaprofessor.php:58 adicionaaluno.php:59 editaaluno.php:72
+msgid "Password"
+msgstr ""
+
+#: editaescola.php:77 adicionaprofessor.php:59 adicionaaluno.php:60
+#: editaaluno.php:73
+msgid "login access password"
+msgstr ""
+
+#: editaprofessor.php:17
+msgid "Teacher not found "
+msgstr ""
+
+#: editaprofessor.php:19
+msgid "Teacher found: USER "
+msgstr ""
+
+#: editaprofessor.php:38 adicionaescola.php:24 adicionaprofessor.php:23
+#: adicionaaluno.php:24 editaaluno.php:41
+msgid "All fields must be typed"
+msgstr ""
+
+#: editaprofessor.php:53 adicionaprofessor.php:42 editaaluno.php:56
+msgid "Birth date"
+msgstr ""
+
+#: editaprofessor.php:59
+msgid "Mobile Phone"
+msgstr ""
+
+#: index.php:16
+msgid ""
+"Contact us to register your school and have access to the game version of "
+"the game"
+msgstr ""
+
+#: adicionagrupo.php:33
+msgid "Add Group"
+msgstr ""
+
+#: adicionagrupo.php:62
+msgid "Error saving data - At least one teacher must be added"
+msgstr ""
+
+#: adicionagrupo.php:70 editagrupoprof.php:57 editagrupoprof.php:70
+msgid "Teacher"
+msgstr ""
+
+#: adicionagrupo.php:70
+msgid "added to the group"
+msgstr ""
+
+#: adicionagrupo.php:73
+msgid "Error adding teacher"
+msgstr ""
+
+#: adicionagrupo.php:73
+msgid "to the group"
+msgstr ""
+
+#: adicionagrupo.php:83
+msgid "Add teacher to this group"
+msgstr ""
+
+#: adicionagrupo.php:84
+msgid "Teachers to add"
+msgstr ""
+
+#: adicionagrupo.php:107 editagrupoprof.php:138 editagrupoaluno.php:116
+msgid "Remove from group"
+msgstr ""
+
+#: adicionagrupo.php:110 editagrupoprof.php:141 editagrupoaluno.php:119
+msgid "Add to group"
+msgstr ""
+
+#: adicionagrupo.php:117
+msgid "Add group with teachers"
+msgstr ""
+
+#: listaaluno.php:11
+msgid "Grade"
+msgstr ""
+
+#: listaaluno.php:12 listaprofessores.php:12
+msgid "Score"
+msgstr ""
+
+#: adicionaescola.php:39 adicionaprofessor.php:39
+msgid "login username"
+msgstr ""
+
+#: adicionaescola.php:41
+msgid "Access profile - 2 to school - 3 to admin"
+msgstr ""
+
+#: adicionaescola.php:43
+msgid "name of the school"
+msgstr ""
+
+#: adicionaescola.php:45
+msgid "Registered name"
+msgstr ""
+
+#: adicionaescola.php:48
+msgid "Registered number"
+msgstr ""
+
+#: adicionaescola.php:49
+msgid "cnpj of the school"
+msgstr ""
+
+#: adicionaescola.php:51
+msgid "full address of the school"
+msgstr ""
+
+#: adicionaescola.php:56 adicionaprofessor.php:56 adicionaaluno.php:57
+#: editaaluno.php:70
+msgid "Zip code"
+msgstr ""
+
+#: adicionaescola.php:59
+msgid "phone number of the school"
+msgstr ""
+
+#: adicionaescola.php:61
+msgid "name of the contact to talk to the school"
+msgstr ""
+
+#: adicionaescola.php:63
+msgid "access password of the school"
+msgstr ""
+
+#: editagrupoprof.php:35
+msgid "Edit teacher form group"
+msgstr ""
+
+#: editagrupoprof.php:45
+msgid "Error saving data - Not allowed to remove all teachers"
+msgstr ""
+
+#: editagrupoprof.php:47 editagrupoaluno.php:47
+msgid "No change was made"
+msgstr ""
+
+#: editagrupoprof.php:57
+msgid "added to the group "
+msgstr ""
+
+#: editagrupoprof.php:70
+msgid " removed from group "
+msgstr ""
+
+#: editagrupoprof.php:79
+msgid "Teacher form group "
+msgstr ""
+
+#: editagrupoprof.php:80
+msgid "Teacher without group"
+msgstr ""
+
+#: editagrupoprof.php:148
+msgid "Save teacher changes"
+msgstr ""
+
+#: login.php:42
+msgid "Type your user name"
+msgstr ""
+
+#: login.php:46
+msgid "password"
+msgstr ""
+
+#: login.php:48
+msgid "Log in"
+msgstr ""
+
+#: adicionaprofessor.php:29 adicionaaluno.php:30
+msgid "Added successfully"
+msgstr ""
+
+#: adicionaprofessor.php:41 adicionaaluno.php:42 editaaluno.php:55
+msgid "name"
+msgstr ""
+
+#: adicionaprofessor.php:43 adicionaaluno.php:44 editaaluno.php:57
+msgid "birth date"
+msgstr ""
+
+#: adicionaprofessor.php:47 adicionaaluno.php:48 editaaluno.php:61
+msgid "phone number"
+msgstr ""
+
+#: adicionaprofessor.php:48 adicionaaluno.php:49 editaaluno.php:62
+msgid "Mobile phone"
+msgstr ""
+
+#: adicionaprofessor.php:49 adicionaaluno.php:50 editaaluno.php:63
+msgid "mobile phone number"
+msgstr ""
+
+#: adicionaprofessor.php:51 adicionaaluno.php:52
+msgid "full address"
+msgstr ""
+
+#: adicionaprofessor.php:53 adicionaaluno.php:54 editaaluno.php:67
+msgid "city"
+msgstr ""
+
+#: adicionaprofessor.php:55 adicionaaluno.php:56 editaaluno.php:69
+msgid "state"
+msgstr ""
+
+#: adicionaprofessor.php:57 adicionaaluno.php:58 editaaluno.php:71
+msgid "zip code"
+msgstr ""
+
+#: adicionaaluno.php:40
+msgid "user login"
+msgstr ""
+
+#: adicionaaluno.php:43
+msgid "Brth date"
+msgstr ""
+
+#: adicionaaluno.php:61 editaaluno.php:77
+msgid "Grade ID"
+msgstr ""
+
+#: adicionaaluno.php:62
+msgid "Grade ID - only a number"
+msgstr ""
+
+#: editagrupoaluno.php:35
+msgid "Edit students from Group "
+msgstr ""
+
+#: editagrupoaluno.php:45
+msgid "Error saving data - Not allowed to remove all students"
+msgstr ""
+
+#: editagrupoaluno.php:57
+msgid "student"
+msgstr ""
+
+#: editagrupoaluno.php:57
+msgid " added to group "
+msgstr ""
+
+#: editagrupoaluno.php:68
+msgid "Student"
+msgstr ""
+
+#: editagrupoaluno.php:68
+msgid "removed from group"
+msgstr ""
+
+#: editagrupoaluno.php:79
+msgid "Students grom group "
+msgstr ""
+
+#: editagrupoaluno.php:80
+msgid "Students without group"
+msgstr ""
+
+#: editagrupoaluno.php:126
+msgid "Save students changes"
+msgstr ""
+
+#: editaaluno.php:18
+msgid "Student not found"
+msgstr ""
+
+#: editaaluno.php:20
+msgid "Student found: USER "
+msgstr ""
+
+#: editaaluno.php:76
+msgid "group id - default to 99999"
+msgstr ""
+
+#: editaaluno.php:78
+msgid "Grade ID  - default to 1"
+msgstr ""
+
+#: listaprofessores.php:11
+msgid "Created questions"
 msgstr ""
