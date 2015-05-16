@@ -12,6 +12,27 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: listaaluno.php:12 listaaluno.php:13
-msgid "A string to be translated would go here"
-msgstr "aquiii"
+#: templates/footer.php:4
+msgid "Management Area QvQ"
+msgstr "Área de Gestão - QvQ"
+
+#: templates/footer.php:7
+msgid "Register by sending your data to:"
+msgstr "Registre-se enviando seus dados para:"
+
+#: templates/footer.php:13
+msgid "QvQ - Quiz Vs Quiz"
+msgstr "QvQ - Quiz Vs Quiz"
+
+#: templates/footer.php:14
+msgid "Project developed as"
+msgstr "Projeto desenvolvido como"
+
+#: templates/footer.php:15
+msgid "a course conclusion papper of"
+msgstr "trabalho de conclusão de curso de"
+
+#: templates/footer.php:16
+msgid "Technology in Game Development from"
+msgstr "Tecnologia em Jogos Digitais da"
+
