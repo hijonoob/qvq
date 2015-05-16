@@ -1,11 +1,6 @@
-
 <?php
 	include 'templates/checagestor.php';
 	include 'templates/header.php';
-
-setlocale( LC_MESSAGES, 'pt_BR');
-putenv("LANGUAGE=pt_BR.utf8");
-bindtextdomain("messages", './locale');
 
 
 echo gettext("A string to be translated would go here");

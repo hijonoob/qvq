@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -45,10 +46,17 @@ echo gettext("Welcome to My PHP Application");
 echo _("Have a nice day");
 */
 ?>
+<?php
+setlocale( LC_MESSAGES, 'pt_BR');
+putenv("LANGUAGE=pt_BR.utf8");
+bindtextdomain("messages", './locale');
+
+?>
 
   </head>
   <body>
   	<div id="wrap">
+
     <?php
       include 'templates/menu.php';
       if(isset($_SESSION['permissao'])) {
