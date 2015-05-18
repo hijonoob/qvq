@@ -33,9 +33,37 @@
 					$cid = $_POST['cid'];
 					$est = $_POST['est'];
 					$cep = $_POST['cep'];
+
 					$telFixo = $_POST['telFixo'];
 					$contato = $_POST['contato'];
 					$senha = $_POST['senha'];
+                    $target_dir = "uploads/";
+                    $nomearquivo = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                    //$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+                    $target_file = $target_dir . $usuario;
+                    $uploadOk = 1;
+                    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+                    // Check if image file is a actual image or fake image
+                    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+                    if($check !== false) {
+                        $uploadOk = 1;
+                    } else {
+                        $uploadOk = 0;
+                    }
+                    if (file_exists($target_file)) {
+                        $uploadOk = 1;
+                        $target_file = $target_dir . $usuario . rand(5, 15);
+                    }
+                     // Check file size
+                    if ($_FILES["fileToUpload"]["size"] > 500000) {
+                        $uploadOk = 0;
+                    }
+                    // Check if $uploadOk is set to 0 by an error
+                    if ($uploadOk == 0) {
+                    // if everything is ok, try to upload file
+                    } else {
+                        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+                    }
 					
 					if ($usuario=='' || $perfil=='' || $nome=='' || $razao=='' || $cnpj=='' || $end=='' || $cid=='' || $est=='' || $cep=='' || $telFixo=='' || $contato=='' || $senha=='') {
 						echo "<div class='alert alert-warning'> " . _( 'All data must be typed') . " </div>";
@@ -50,7 +78,16 @@
 				endif;
 			?>
 
-			<form action="" method="POST" id="editaescola">
+
+			<?php
+	            $target_dir = "uploads/";
+	            $target_file = $target_dir . $usuario;
+	            if (file_exists($target_file)) {
+	            	echo "<img src='". $target_file . "' />";
+                }
+            ?>
+
+			<form action="" method="POST" id="editaescola"  enctype="multipart/form-data">
 				<label for="usuario"> <?php echo _( 'User'); ?>: </label>
 					<input type="text" placeholder="<?php echo _( 'login user'); ?>" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
 				<label for="perfil"> <?php echo _( 'Profile'); ?>: </label>
@@ -75,6 +112,8 @@
 					<input type="text" placeholder="<?php echo _( 'contact name to talk to the school'); ?> " class="form-control" name="contato" value=<?php echo "'". $contato . "'"; ?>/>
 				<label for="senha"> <?php echo _( 'Password'); ?>: </label>
 					<input type="text" placeholder="<?php echo _( 'login access password'); ?> s" class="form-control" name="senha" value=<?php echo "'". $senha . "'"; ?>/>
+                <label for="fileToUpload">  Avatar </label>
+                    <input type="file" name="fileToUpload" id="fileToUpload" placeholer="avatar">
 				<input type="submit" name="editar" value="<?php echo  _( 'Edit school'); ?> "" class="btn btn-default" />	
 			</form>		
 		</div>	
